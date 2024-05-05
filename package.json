@@ -1,0 +1,23 @@
+{
+  "name": "custom-promise-class",
+  "version": "1.0.0",
+  "description": "The Promise class is a TypeScript-based implementation that provides a flexible and customizable approach to handling asynchronous operations through promise-like functionality.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "promise",
+    "async",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  }
+}
