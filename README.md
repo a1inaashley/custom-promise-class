@@ -24,21 +24,22 @@ constructor(executor: ExecutorFunction<T>)
 + `resolve`: A function to resolve the promise.
 + `reject`: A function to reject the promise.
 ___
- Methods
-    ## Private Methods
+## Methods
+### Private Methods
 + `_resolve(value: T | PromiseLike<T>): void`
 Resolves the promise with the given value or another promise. If the promise is already settled, it does nothing.
 + `_reject(reason: any): void`
 Rejects the promise with a provided reason. If the promise is already settled, it does nothing.
-## Public Methods
+### Public Methods
 + `then<TResult1 = T, TResult2 = never>(onFulfilled?: OnFulfilledFunction<T, TResult1>, onRejected?: OnRejectedFunction<TResult2>): CustomPromise<TResult1 | TResult2>`
 Attaches callbacks for the resolution and/or rejection of the CustomPromise. Returns a new promise resolved with the return value of the callback executed.
 + `catch<TResult = never>(onRejected?: OnRejectedFunction<TResult>): CustomPromise<T | TResult>`
 Attaches a rejection handler callback and returns a new promise, providing a way to handle rejection cases specifically.
-## Static Methods
+### Static Methods
 + `resolve<U>(value: U | PromiseLike<U>): CustomPromise<U>`
 Returns a promise that is immediately resolved with the given value.
 + `reject<U>(reason?: any): CustomPromise<U>`
 Returns a promise that is immediately rejected with the provided reason.
 + `delay(ms: number): CustomPromise<void>`
 Creates a promise that resolves after a specified number of milliseconds, simulating a delay.
+___
