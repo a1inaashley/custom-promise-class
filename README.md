@@ -43,3 +43,24 @@ Returns a promise that is immediately rejected with the provided reason.
 + `delay(ms: number): CustomPromise<void>`
 Creates a promise that resolves after a specified number of milliseconds, simulating a delay.
 ___
+## Usage Examples
+### Creating a New Promise
+```ts
+const myPromise = new CustomPromise<number>((resolve, reject) => {
+  setTimeout(() => resolve(42), 1000);
+});
+```
+### Handling Promises
+```ts
+myPromise.then(value => console.log(value)).catch(error => console.error(error));
+```
+### Chaining Promises
+```ts
+myPromise.then(value => value * 2).then(result => console.log(result));
+```
+### Static Utilities
+```ts
+CustomPromise.resolve(10).then(console.log); // Prints 10
+CustomPromise.reject('Error').catch(console.error); // Prints 'Error'
+CustomPromise.delay(500).then(() => console.log('Delayed by 500 ms'));
+```
