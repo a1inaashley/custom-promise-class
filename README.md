@@ -23,7 +23,7 @@ npm install typescript --save-dev
 npx tsc --init
 ```
 > This command creates a `tsconfig.json` file in your project directory. You may need to adjust the compiler options based on your project's requirements.
-#### Including CustomPromise<T>
+#### Including CustomPromise
 1. `Clone or download the CustomPromise<T> class`: You can place the CustomPromise.ts file in your project directory, typically under a subdirectory like /src.
 2. `Importing CustomPromise<T>`: Use the following import statement in your TypeScript files where you want to use the custom promise:
 ```ts
@@ -41,9 +41,9 @@ node ./dist/your-script.js
 > Ensure you compile the TypeScript files into JavaScript (using the TypeScript compiler), and then run the resulting JavaScript with Node.js. Adjust the paths according to your project setup.
 ___
 ## Types
-+ `ResolveFunction`: Function type for resolving a promise with a value or another promise-like object.
++ `ResolveFunction<T>`: Function type for resolving a promise with a value or another promise-like object.
 + `RejectFunction`: Function type for rejecting a promise with a reason.
-+ `ExecutorFunction`: Function type that takes a resolve and reject function, used to initialize promise behavior.
++ `ExecutorFunction<T>`: Function type that takes a resolve and reject function, used to initialize promise behavior.
 + `OnFulfilledFunction<T, TResult>`: Function type that defines the callback to execute when a promise is fulfilled.
 + `OnRejectedFunction<TResult>`: Function type that defines the callback to execute when a promise is rejected.
 ___
