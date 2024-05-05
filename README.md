@@ -20,11 +20,12 @@ ___
 ```ts
 constructor(executor: ExecutorFunction<T>)
 ```
-## Initializes a new instance of CustomPromise<T> with an executor function which immediately executes with two arguments:
+### Initializes a new instance of CustomPromise<T> with an executor function which immediately executes with two arguments:
 + `resolve`: A function to resolve the promise.
 + `reject`: A function to reject the promise.
 ___
-## Private Methods
+ Methods
+    ## Private Methods
 + `_resolve(value: T | PromiseLike<T>): void`
 Resolves the promise with the given value or another promise. If the promise is already settled, it does nothing.
 + `_reject(reason: any): void`
