@@ -10,6 +10,26 @@ ___
 + `Concurrency and Timing`: Due to JavaScript's single-threaded nature, promise resolution and rejection are asynchronous actions. Code execution may continue before these actions complete, leading to potential timing issues in concurrent scenarios.
 + `Debugging`: Debugging custom promise implementations can be more challenging than with native promises. Use appropriate logging or debugging tools to trace promise states and values.
 ___
+## Installation
+### To begin using the CustomPromise<T> class in your project, follow these installation steps:
+#### Setting Up Your Project
++ `Note`: If you are starting a new project, initialize a new Node.js project by running:
+```ts
+mkdir my-project
+cd my-project
+npm init -y```
+> This command sets up a new package.json file for your project.
+#### Installing TypeScript
+`CustomPromise<T>` is written in TypeScript, so you need to install TypeScript in your project:
+```
+npm install typescript --save-dev
+```
+Configuring TypeScript
+```
+npx tsc --init
+```
+> This command creates a `tsconfig.json` file in your project directory. You may need to adjust the compiler options based on your project's requirements.
+___
 ## Types
 + `ResolveFunction`: Function type for resolving a promise with a value or another promise-like object.
 + `RejectFunction`: Function type for rejecting a promise with a reason.
