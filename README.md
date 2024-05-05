@@ -53,11 +53,10 @@ const myPromise = new CustomPromise<number>((resolve, reject) => {
 > [!WARNING]
 > Be careful with asynchronous operations inside the executor. Always handle potential errors and consider scenarios where operations might fail or take longer than expected.
 ### Handling Promises
++ Always include a `catch` clause or handle rejections in `then` to prevent potential uncaught promise rejections.
 ```ts
 myPromise.then(value => console.log(value)).catch(error => console.error(error));
 ```
-> [!NOTE]
-> Always include a `catch` clause or handle rejections in `then` to prevent potential uncaught promise rejections.
 > [!IMPORTANT]
 Always handle both fulfillment and rejection to ensure that errors do not go unnoticed.
 ### Chaining Promises
@@ -65,8 +64,8 @@ Always handle both fulfillment and rejection to ensure that errors do not go unn
 ```ts
 myPromise.then(value => value * 2).then(result => console.log(result));
 ```
-> [!NOTE]
-> The order of chained operations is guaranteed, but each operation's timing can vary depending on how each promise resolves.### Static Utilities
++ The order of chained operations is guaranteed, but each operation's timing can vary depending on how each promise resolves.
+### Static Utilities
 ```ts
 CustomPromise.resolve(10).then(console.log); // Prints 10
 CustomPromise.reject('Error').catch(console.error); // Prints 'Error'
