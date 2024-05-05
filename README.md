@@ -60,7 +60,7 @@ myPromise.then(value => console.log(value)).catch(error => console.error(error))
 > [!IMPORTANT]
 Always handle both fulfillment and rejection to ensure that errors do not go unnoticed.
 ### Chaining Promises
-+ `Tip`: Chain multiple then calls to transform values or perform additional asynchronous operations sequentially.
+`Tip`: Chain multiple then calls to transform values or perform additional asynchronous operations sequentially.
 ```ts
 myPromise.then(value => value * 2).then(result => console.log(result));
 ```
