@@ -1,7 +1,27 @@
 {
+  "name": "promise-class",
+  "version": "1.0.0",
+  "description": "The Promise class is a TypeScript-based implementation that provides a flexible and customizable approach to handling asynchronous operations through promise-like functionality.",
+  "scripts": {
+    "test": "npx jest test/promise.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a1inaashley/promise-class"
+  },
+  "author": "a1inaashley",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/a1inaashley/promise-class/issues"
+  },
+  "homepage": "https://github.com/a1inaashley/promise-class#readme",
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "jest": "^29.7.0",
-    "ts-jest": "^29.1.2"
-  }
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.5"
+  },
+  "files": [
+    "test/"
+  ]
 }
