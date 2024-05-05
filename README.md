@@ -3,18 +3,11 @@ ___
 ## Overview
 The `CustomPromise` class is a custom implementation of promises in TypeScript, providing functionality similar to native JavaScript promises. It allows chaining asynchronous operations and managing them through resolution or rejection. The custom promise supports standard operations like `then`, `catch`, and `finally`, and includes static methods for immediate resolution, rejection, and delays.
 ___
-## Important Notes and Warnings
-+ `Compatibility Note`: This implementation aims to mimic native JavaScript promises but may not cover all edge cases or behaviors. Ensure thorough testing when replacing native promises with CustomPromise<T> in critical applications.
-+ `Error Handling`: Exceptions thrown in the executor function are automatically caught and will cause the promise to be rejected. Ensure proper error handling is in place to avoid unhandled promise rejections.
-+ `Performance Considerations`: While `CustomPromise<T>` provides key functionalities of standard promises, it might not be optimized for performance at the same level as native implementations in JavaScript engines.
-+ `Concurrency and Timing`: Due to JavaScript's single-threaded nature, promise resolution and rejection are asynchronous actions. Code execution may continue before these actions complete, leading to potential timing issues in concurrent scenarios.
-+ `Debugging`: Debugging custom promise implementations can be more challenging than with native promises. Use appropriate logging or debugging tools to trace promise states and values.
-___
 ## Installation
 ### To begin using the CustomPromise<T> class in your project, follow these installation steps:
 #### Setting Up Your Project
 `Note`: If you are starting a new project, initialize a new Node.js project by running:
-```ts
+```bash
 mkdir my-project
 cd my-project
 npm init -y
@@ -25,11 +18,27 @@ npm init -y
 ```
 npm install typescript --save-dev
 ```
-Configuring TypeScript
-```
+#### Configuring TypeScript
+```bash
 npx tsc --init
 ```
 > This command creates a `tsconfig.json` file in your project directory. You may need to adjust the compiler options based on your project's requirements.
+#### Including CustomPromise<T>
+1. `Clone or download the CustomPromise<T> class`: You can place the CustomPromise.ts file in your project directory, typically under a subdirectory like /src.
+2. `Importing CustomPromise<T>`: Use the following import statement in your TypeScript files where you want to use the custom promise:
+```ts
+import { CustomPromise } from './path/to/CustomPromise';
+```
+> Replace './path/to/CustomPromise' with the actual path to the file in your project structure.
+
+### Running Your Application
+`Note`: Compile your TypeScript code and run your application using Node.js:
+```bash
+npx tsc
+node ./dist/your-script.js
+```
+> [!NOTE]
+> Ensure you compile the TypeScript files into JavaScript (using the TypeScript compiler), and then run the resulting JavaScript with Node.js. Adjust the paths according to your project setup.
 ___
 ## Types
 + `ResolveFunction`: Function type for resolving a promise with a value or another promise-like object.
