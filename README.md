@@ -4,11 +4,11 @@ ___
 The `CustomPromise` class is a custom implementation of promises in TypeScript, providing functionality similar to native JavaScript promises. It allows chaining asynchronous operations and managing them through resolution or rejection. The custom promise supports standard operations like `then`, `catch`, and `finally`, and includes static methods for immediate resolution, rejection, and delays.
 ___
 ## Important Notes and Warnings
-`Compatibility Note`: This implementation aims to mimic native JavaScript promises but may not cover all edge cases or behaviors. Ensure thorough testing when replacing native promises with CustomPromise<T> in critical applications.
-`Error Handling`: Exceptions thrown in the executor function are automatically caught and will cause the promise to be rejected. Ensure proper error handling is in place to avoid unhandled promise rejections.
-`Performance Considerations`: While `CustomPromise<T>` provides key functionalities of standard promises, it might not be optimized for performance at the same level as native implementations in JavaScript engines.
-`Concurrency and Timing`: Due to JavaScript's single-threaded nature, promise resolution and rejection are asynchronous actions. Code execution may continue before these actions complete, leading to `potential` timing issues in concurrent scenarios.
-`Debugging`: Debugging custom promise implementations can be more challenging than with native promises. Use appropriate logging or debugging tools to trace promise states and values.
++ `Compatibility Note`: This implementation aims to mimic native JavaScript promises but may not cover all edge cases or behaviors. Ensure thorough testing when replacing native promises with CustomPromise<T> in critical applications.
++ `Error Handling`: Exceptions thrown in the executor function are automatically caught and will cause the promise to be rejected. Ensure proper error handling is in place to avoid unhandled promise rejections.
++ `Performance Considerations`: While `CustomPromise<T>` provides key functionalities of standard promises, it might not be optimized for performance at the same level as native implementations in JavaScript engines.
++ `Concurrency and Timing`: Due to JavaScript's single-threaded nature, promise resolution and rejection are asynchronous actions. Code execution may continue before these actions complete, leading to potential timing issues in concurrent scenarios.
++ `Debugging`: Debugging custom promise implementations can be more challenging than with native promises. Use appropriate logging or debugging tools to trace promise states and values.
 ___
 ## Types
 + `ResolveFunction`: Function type for resolving a promise with a value or another promise-like object.
