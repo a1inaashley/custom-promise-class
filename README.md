@@ -13,11 +13,12 @@ ___
 ## Installation
 ### To begin using the CustomPromise<T> class in your project, follow these installation steps:
 #### Setting Up Your Project
-+ `Note`: If you are starting a new project, initialize a new Node.js project by running:
+`Note`: If you are starting a new project, initialize a new Node.js project by running:
 ```ts
 mkdir my-project
 cd my-project
-npm init -y```
+npm init -y
+```
 > This command sets up a new package.json file for your project.
 #### Installing TypeScript
 `CustomPromise<T>` is written in TypeScript, so you need to install TypeScript in your project:
