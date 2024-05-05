@@ -3,7 +3,6 @@ ___
 ## Overview
 The `CustomPromise` class is a custom implementation of promises in TypeScript, providing functionality similar to native JavaScript promises. It allows chaining asynchronous operations and managing them through resolution or rejection. The custom promise supports standard operations like `then`, `catch`, and `finally`, and includes static methods for immediate resolution, rejection, and delays.
 ___
-## Installation
 ### Installation
 ```bash
 $ npm install custom-promise-class
