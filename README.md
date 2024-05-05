@@ -50,17 +50,27 @@ const myPromise = new CustomPromise<number>((resolve, reject) => {
   setTimeout(() => resolve(42), 1000);
 });
 ```
+> [!WARNING]
+> Be careful with asynchronous operations inside the executor. Always handle potential errors and consider scenarios where operations might fail or take longer than expected.
 ### Handling Promises
 ```ts
 myPromise.then(value => console.log(value)).catch(error => console.error(error));
 ```
+> [!NOTE]
+> Always include a `catch` clause or handle rejections in `then` to prevent potential uncaught promise rejections.
+> [!IMPORTANT]
+Always handle both fulfillment and rejection to ensure that errors do not go unnoticed.
 ### Chaining Promises
++ `Tip`: Chain multiple then calls to transform values or perform additional asynchronous operations sequentially.
 ```ts
 myPromise.then(value => value * 2).then(result => console.log(result));
 ```
-### Static Utilities
+> [!NOTE]
+> The order of chained operations is guaranteed, but each operation's timing can vary depending on how each promise resolves.### Static Utilities
 ```ts
 CustomPromise.resolve(10).then(console.log); // Prints 10
 CustomPromise.reject('Error').catch(console.error); // Prints 'Error'
 CustomPromise.delay(500).then(() => console.log('Delayed by 500 ms'));
 ```
+> [!CAUTION]
+> Overuse of `CustomPromise.delay` in loops or tight cycles can overwhelm JavaScript's event loop, leading to sluggish performance.
